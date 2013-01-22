@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  {% block head %}
+  <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='style.css')}}" />
+  <title>{% block title %}{% endblock %}</title>
+  {% endblock %}
+</head>
+<body>
+  <div class="content">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Me</a></li>
+        <li><a href="/counseling">Counseling Services</a></li>
+        <li><a href="/supervision">Clinical Supervision Services</a></li>
+        <li><a href="/educational">Educational Consulting</a></li>
+        <li><a href="/fees">Fees</a></li>
+      </ul>
+    </nav>
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
