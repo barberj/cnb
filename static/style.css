@@ -1,0 +1,12 @@
+body{
+    background: #F6F6F6 url('http://www.jailbreaknation.com/wp-content/themes/Avenue/images/patterns/pattern5.png') repeat;
+}
+
+.container {
+    background-color: #fff;
+    margin-bottom: 5em;
+}
+
+.content {
+    padding: 1em;
+}
