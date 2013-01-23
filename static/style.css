@@ -1,12 +1,44 @@
 body{
-    background: #F6F6F6 url('http://www.jailbreaknation.com/wp-content/themes/Avenue/images/patterns/pattern5.png') repeat;
+  background: #F6F6F6 url('http://www.jailbreaknation.com/wp-content/themes/Avenue/images/patterns/pattern5.png') repeat;
 }
 
 .container {
-    background-color: #fff;
-    margin-bottom: 5em;
+  background-color: #fff;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
 }
 
 .content {
-    padding: 1em;
+  padding: 1em;
+}
+
+.last-child {
+  margin-bottom: 5em;
+  position: relative;
+  top: -10px
+  -webkit-border-top-right-radius: 0px;
+  -webkit-border-top-left-radius: 0px;
+     -moz-border-top-right-radius: 0px;
+     -moz-border-top-left-radius: 0px;
+          border-top-right-radius: 0px;
+          border-top-left-radius: 0px;
+}
+
+.nav-wrapper {
+  margin-bottom: 0px;
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  position: relative;
+  top: -10px
+}
+
+.cursive {
+  font-family: 'Yesteryear', cursive !important;
+  font-size: 45px;
 }
