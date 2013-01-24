@@ -41,13 +41,18 @@
 
 {% block jsscript %}
 <script>
-  $(document).ready(function() {
-   boxes = $('.hero-unit');
-   maxHeight = Math.max.apply(
-     Math, boxes.map(function() {
-       return $(this).height();
-   }).get());
-   boxes.height(maxHeight);
-  });
+  var resize = function() {
+    if( $(window).width() <= 400 ) {
+    } else {
+      boxes = $('.hero-unit');
+      maxHeight = Math.max.apply(
+        Math, boxes.map(function() {
+          return $(this).height();
+      }).get());
+      boxes.height(maxHeight);
+    }
+  };
+  $(document).ready(resize);
+  $(window).resize(resize);
 </script>
 {% endblock %}
