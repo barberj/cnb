@@ -41,10 +41,12 @@
 
 {% block jsscript %}
 <script>
-  var resize = function() {
-    if( $(window).width() <= 400 ) {
-    } else {
-      boxes = $('.hero-unit');
+  function resizeHandler() {
+    boxes = $('.hero-unit');
+    for(var i=0;i< boxes.length;i++){
+      $(boxes[i]).css("height", "auto");
+    }
+    if( $(window).width() >= 765 ) {
       maxHeight = Math.max.apply(
         Math, boxes.map(function() {
           return $(this).height();
@@ -52,7 +54,18 @@
       boxes.height(maxHeight);
     }
   };
-  $(document).ready(resize);
-  $(window).resize(resize);
+
+  window.addEventListener("resize", resizeThrottler, false);
+  var resizeTimeout;
+  function resizeThrottler() {
+    // ignore resize events as long as an actualResizeHandler execution is in the queue
+    if ( !resizeTimeout ) {
+      resizeTimeout = setTimeout(function() {
+        resizeTimeout = null;
+        resizeHandler();
+       }, 66);
+    }
+  }
+  $(document).ready(resizeHandler);
 </script>
 {% endblock %}
