@@ -31,7 +31,7 @@
 
         <div class="nav-collapse collapse">
           <ul class="nav">
-            <li><a href="/">Home</a></li>
+            <li><a href="/"><i class="icon-home"></i></a></li>
             <li><a href="/about">About Me</a></li>
             <li><a href="/counseling">Counseling Services</a></li>
             <li><a href="/supervision">Clinical Supervision Services</a></li>
@@ -49,5 +49,6 @@
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+  {% block jsscript %}{% endblock %}
 </body>
 </html>
