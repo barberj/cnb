@@ -28,11 +28,18 @@ body{
   color: #51b9db;
 }
 
-.content h2:nth-of-type(even) {
+.tehword {
+  color: #51b9db;
+  float: left;
+  font-size: 3em;
+  margin: 0 .2em .2em 0;
+}
+
+.content h2:nth-of-type(odd) {
   text-align: right;
 }
 
-.last-child {
+.lst-chld {
   margin-bottom: 5em;
   position: relative;
   top: -10px
