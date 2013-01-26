@@ -11,6 +11,10 @@ def fees():
 def about():
     return render_template('about.html')
 
+@app.route("/counseling")
+def counseling():
+    return render_template('counseling.html')
+
 @app.route("/")
 def index():
     return render_template('index.html')
