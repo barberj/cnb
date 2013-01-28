@@ -30,6 +30,7 @@ body{
 
 .tehword {
   color: #51b9db;
+  color: #C23A1F;
   float: left;
   font-size: 3em;
   margin: .2em;
@@ -74,4 +75,8 @@ body{
   background-image: url('http://opentextlearning.com/media/icon-certifications.png');
   background-repeat: no-repeat;
   background-position: 3em 50%;
+}
+
+.children {
+    background: url("http://farm4.staticflickr.com/3283/3024023899_f061525273.jpg") top left no-repeat;
 }
