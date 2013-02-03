@@ -81,13 +81,16 @@ body{
     padding-top: .25em;
 
 }
+
+.counseling img {
+    padding: 1em;
+}
+
 .counseling p {
-    margin: 2em 1em 0em 10em;
-    padding-bottom: 1em;
+    padding: 1em;
 }
 
 #children {
-    background: url("img/child_banner.png") top left no-repeat;
-    position: relative;
-    background-size: 100%;
+    background-color: #D7B7B1;
+    border-top: 1px solid #A0A0A0;
 }
