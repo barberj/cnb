@@ -33,7 +33,7 @@
 
       <div id="adolescents" class="item">
         <h2>Adolescents</h2>
-        <div style="float:right;margin-left:2em;" class="well">
+        <div style="float:right;margin-left:2em;" class="well visible-desktop">
           Counseling services to help children and their families with:
           <ul>
             <li>Behavioral problems</li>
@@ -55,11 +55,24 @@
         I work to help teens appreciate their parents and help parents celebrate the launching
         of their teens. I teach adolescents social and life skills that will serve them
         throughout their life in schools, families, and in the job market.
+        <div class="well hidden-desktop" style="margin:2em;">
+          Counseling services to help children and their families with:
+          <ul>
+            <li>Behavioral problems</li>
+            <li>Academic struggles</li>
+            <li>Social skill deficits</li>
+            <li>Friendship issues</li>
+            <li>Family conflict</li>
+            <li>Worries / Anxiety / Stress</li>
+            <li>Low self-esteem</li>
+            <li>Separation and Divorce Issues</li>
+          </ul>
+        </div>
       </div>
 
       <div id="therapy" class="item">
         <h2>Therapy for Individuals</h2>
-        <div class="well" style="float:left;margin-right:2em;width:50%;">
+        <div class="well visible-desktop" style="float:left;margin-right:2em;width:50%;">
           Common concerns brought by individual clients include symptoms of:
           <ul>
             <li>Relationship Struggles</li>
@@ -82,6 +95,19 @@
         like the particular problem is not getting better. I help my clients learn
         new approaches, so they don't simply try hard, but actually see progress.
         Most clients report they wish they had started the process sooner!
+        <div class="well hidden-desktop" style="margin:2em">
+          Common concerns brought by individual clients include symptoms of:
+          <ul>
+            <li>Relationship Struggles</li>
+            <li>Work Stress including Underemployment / Unemployment</li>
+            <li>Anxiety</li>
+            <li>Grief</li>
+            <li>Low Self-Esteem</li>
+          </ul>
+          Issues such as these are handled in a compassionate, non-blaming approach.
+          Therapy is focused on solutions and attempts to bring about short-term
+          relief as well as long-term change.
+        </div>
       </div>
 
     </div>
@@ -93,6 +119,17 @@
 {% block jsscript %}
 <script>
 $(document).ready(function () {
+
+  $('#counselingCarousel').carousel({
+    interval: 0
+  });
+
+  $('#counselingCarousel h2').each(function(i, el){
+    el.innerHTML = '<a class="carousel-control left hidden-desktop" data-slide="prev">&lsaquo;</a>' +
+        el.innerHTML +
+        '<a class="carousel-control right hidden-desktop" data-slide="next">&rsaquo;</a>';
+  });
+
   $('.carousel-control.left').bind('click', function(){
     $('#counselingCarousel').carousel('prev');
   });
@@ -100,14 +137,12 @@ $(document).ready(function () {
     $('#counselingCarousel').carousel('next');
   });
 
-  $('#counselingCarousel').carousel({
-    interval: 0
-  });
-
   $('.carousel-control').fadeOut(1000);
 
   $('#counselingCarousel').mouseenter(function (){
-    $('.carousel-control').fadeIn(100);
+    if($(document).width() > 979){
+      $('.carousel-control').fadeIn(100);
+    }
   });
   $('#counselingCarousel').mouseleave(function (){
     $('.carousel-control').fadeOut(100);
