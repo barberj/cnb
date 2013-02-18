@@ -15,6 +15,10 @@ def about():
 def counseling():
     return render_template('counseling.html')
 
+@app.route("/supervision")
+def supervision():
+    return render_template('supervision.html')
+
 @app.route("/")
 def index():
     return render_template('index.html')
