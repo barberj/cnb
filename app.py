@@ -19,6 +19,10 @@ def counseling():
 def supervision():
     return render_template('supervision.html')
 
+@app.route("/educational")
+def educational():
+    return render_template('educational.html')
+
 @app.route("/")
 def index():
     return render_template('index.html')

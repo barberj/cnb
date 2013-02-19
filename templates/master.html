@@ -8,8 +8,8 @@
   <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='bootstrap/css/bootstrap-responsive.min.css')}}" />
   <link rel="stylesheet" type="text/css" media="screen" href="{{url_for('static', filename='style.css')}}" />
   <link href='http://fonts.googleapis.com/css?family=Yesteryear' rel='stylesheet' type='text/css'>
-  <title>{% block title %}{% endblock %}</title>
   {% endblock %}
+  <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
   <div class="container nav-wrapper">
@@ -44,6 +44,6 @@
   </div>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
-  {% block jsscript %}{% endblock %}
+  {% block javascript %}{% endblock %}
 </body>
 </html>

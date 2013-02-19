@@ -102,6 +102,14 @@ body{
     color: blue;
 }
 
+#edu b {
+  color: #C23A1F;
+}
+
+#cloud {
+  float: left;
+}
+
 @media (max-width: 979px) {
   h2 {
     text-align: center !important;
